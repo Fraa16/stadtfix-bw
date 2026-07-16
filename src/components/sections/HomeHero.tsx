@@ -4,37 +4,39 @@ import { LinkButton } from "@/components/Button";
 export function HomeHero() {
   return (
     <section className="relative bg-ink text-white">
-      <div className="grid lg:grid-cols-[1fr_44%]">
+      {/* Auf Desktop füllt der Hero die Viewport-Höhe abzüglich Header
+          (Top-Bar 40px + Hauptleiste 68px); Inhalt vertikal zentriert. */}
+      <div className="grid lg:min-h-[calc(100svh-108px)] lg:grid-cols-[1fr_44%]">
         {/* Textseite */}
-        <div className="relative bg-grid-dark">
+        <div className="relative flex bg-grid-dark">
           <div
             className="pointer-events-none absolute inset-y-0 left-0 w-1 bg-accent"
             aria-hidden
           />
-          <div className="container-site py-20 lg:max-w-none lg:py-32 lg:pl-[max(2rem,calc((100vw-76rem)/2+2rem))] lg:pr-16">
+          <div className="container-site flex flex-col justify-center py-16 lg:max-w-none lg:py-10 lg:pl-[max(2rem,calc((100vw-76rem)/2+2rem))] lg:pr-16">
             <p className="mb-5 flex items-center gap-3 font-display text-[13px] font-bold uppercase tracking-[0.18em] text-accent">
               <span className="inline-block h-px w-8 bg-current" aria-hidden />
               Fachbetrieb aus Nürtingen
             </p>
-            <h1 className="max-w-2xl font-display text-[2.4rem] font-extrabold leading-[1.06] tracking-tight md:text-[2.9rem] xl:text-[3.3rem]">
+            <h1 className="max-w-2xl font-display text-[2.4rem] font-extrabold leading-[1.06] tracking-tight md:text-[2.9rem] lg:text-[min(3.3rem,5.1vh)]">
               Taubenabwehr in Baden-Württemberg:{" "}
               <span className="text-accent">
                 dauerhafte Lösungen für Dach, Balkon und Gewerbe.
               </span>
             </h1>
-            <p className="mt-7 max-w-xl text-[17px] leading-relaxed text-white/75 md:text-lg">
+            <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-white/75 md:text-lg">
               StadtFix montiert Edelstahl-Spikes und Schutznetze an Wohn- und
               Gewerbegebäuden in Nürtingen, Stuttgart und ganz
               Baden-Württemberg: tierschutzkonform, sauber ausgeführt, mit 3
               Jahren Garantie auf jede Montage.
             </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               <LinkButton href="/kontakt/">Kostenlose Begehung anfragen</LinkButton>
               <LinkButton href="/taubenabwehr/" variant="outline-light">
                 Einsatzbereiche ansehen
               </LinkButton>
             </div>
-            <p className="mt-6 text-[13px] text-white/45">
+            <p className="mt-5 text-[13px] text-white/45">
               Kostenlos und unverbindlich · Antwort innerhalb von 24 Stunden
             </p>
           </div>
