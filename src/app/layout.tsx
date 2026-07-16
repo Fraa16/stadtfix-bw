@@ -23,6 +23,12 @@ export const metadata: Metadata = {
   },
   description:
     "Taubenabwehr für Gewerbe und Privat in Nürtingen, Stuttgart und ganz Baden-Württemberg. Edelstahl-Spikes und Netze, tierschutzkonform, 3 Jahre Garantie.",
+  openGraph: {
+    siteName: "StadtFix",
+    locale: "de_DE",
+    type: "website",
+    images: [{ url: "/images/hero.jpg", width: 2000, height: 1250 }],
+  },
 };
 
 export default function RootLayout({

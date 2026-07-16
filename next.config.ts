@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // URLs mit abschließendem Slash — konsistent mit Sitemap/Canonicals aus dem SEO-Konzept
+  trailingSlash: true,
 };
 
 export default nextConfig;
