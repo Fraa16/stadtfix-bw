@@ -30,8 +30,8 @@ export function AboutTeaser() {
         </div>
         <div className="relative aspect-[4/3] overflow-hidden border border-line bg-white">
           <Image
-            src="/images/ueber-uns.jpg"
-            alt="StadtFix Fachbetrieb für Taubenabwehr bei der Montage"
+            src="/images/ueber-uns.webp"
+            alt="Montage von Taubenabwehr an einer Gebäudefassade mit Hubbühne und Seilzugang"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"

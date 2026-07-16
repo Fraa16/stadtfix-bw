@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "StadtFix",
     locale: "de_DE",
     type: "website",
-    images: [{ url: "/images/hero.jpg", width: 2000, height: 1250 }],
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
   },
 };
 

@@ -73,8 +73,8 @@ export default function UeberUnsPage() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden border border-line bg-mist">
             <Image
-              src="/images/ueber-uns.jpg"
-              alt="StadtFix Gründer, Fachbetrieb für Taubenabwehr in Nürtingen"
+              src="/images/ueber-uns.webp"
+              alt="Taubenabwehr-Montage an einer Fassade, Fachbetrieb StadtFix aus Nürtingen"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

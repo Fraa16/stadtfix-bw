@@ -7,12 +7,12 @@ export function HomeHero() {
       {/* Hintergrundbild, stark abgedunkelt */}
       <div className="absolute inset-0" aria-hidden>
         <Image
-          src="/images/hero.jpg"
+          src="/images/hero.webp"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-30"
+          className="object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/40" />
       </div>
@@ -20,11 +20,13 @@ export function HomeHero() {
       <div className="container-site relative py-24 md:py-36">
         <p className="font-display text-[13px] font-bold uppercase tracking-[0.18em] text-accent mb-5 flex items-center gap-3">
           <span className="inline-block h-px w-8 bg-current" aria-hidden />
-          Taubenabwehr in Baden-Württemberg
+          Fachbetrieb aus Nürtingen
         </p>
         <h1 className="max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
-          Tauben nisten. Kot frisst Substanz.{" "}
-          <span className="text-accent">Taubenabwehr, die dauerhaft hält.</span>
+          Taubenabwehr in Baden-Württemberg:{" "}
+          <span className="text-accent">
+            dauerhafte Lösungen für Dach, Balkon und Gewerbe.
+          </span>
         </h1>
         <p className="mt-6 max-w-2xl text-[17px] leading-relaxed text-white/80 md:text-lg">
           StadtFix montiert Edelstahl-Spikes und Schutznetze an Wohn- und

@@ -35,8 +35,8 @@ export const segments: Segment[] = [
       "Tauben unter dem Hallendach kosten mehr als Reinigung: Sie gefährden Audits, Lagerware und die Sicherheit an Laderampen. StadtFix sichert Produktions- und Lagerhallen in ganz Baden-Württemberg, planbar und ohne Stillstand Ihrer Abläufe.",
     heroCta: "Kostenlose Betriebsbegehung anfragen",
     image: {
-      src: "/images/segments/fabriken-unternehmen.jpg",
-      alt: "Taubenabwehr für Industriehallen, Stahlträger einer Fabrikhalle",
+      src: "/images/segments/fabriken-unternehmen.webp",
+      alt: "Taubenabwehr für Industriehallen, Vordach und Stahlkonstruktion eines Betriebsgebäudes",
     },
     problem: {
       h2: "Was Tauben einen Betrieb tatsächlich kosten",
@@ -124,8 +124,8 @@ export const segments: Segment[] = [
       "Offene Bauweise, warme Nischen, kein natürlicher Feind: Parkhäuser sind für Tauben ideale Brutplätze. Für Betreiber bedeuten sie Kundenbeschwerden, Reinigungskosten und langfristig Schäden am Beton. StadtFix verschließt die Nistbereiche dauerhaft.",
     heroCta: "Angebot für Ihr Parkhaus anfordern",
     image: {
-      src: "/images/segments/parkhaeuser.jpg",
-      alt: "Taubenabwehr im Parkhaus, Betondecke eines Parkdecks",
+      src: "/images/segments/parkhaeuser.webp",
+      alt: "Taubenabwehr am Parkdeck, Edelstahl-Spikes auf einer Betonbrüstung",
     },
     problem: {
       h2: "Warum Tauben im Parkhaus teurer sind, als sie aussehen",
@@ -209,8 +209,8 @@ export const segments: Segment[] = [
       "Der Spalt zwischen Modul und Dach ist für Tauben der perfekte Nistplatz: geschützt, warm, ungestört. Für Sie bedeutet er Ertragsverlust, Kabelschäden und im Ernstfall Brandrisiko. StadtFix verschließt ihn, ohne Eingriff in Ihre Module.",
     heroCta: "PV-Anlage kostenlos prüfen lassen",
     image: {
-      src: "/images/segments/photovoltaikanlagen.jpg",
-      alt: "Taubenabwehr an Photovoltaikanlage, Solarmodule auf Hausdach",
+      src: "/images/segments/photovoltaikanlagen.webp",
+      alt: "Taubenabwehr an Photovoltaikanlage, Unterflugschutz am Modulrand auf einem Ziegeldach",
     },
     problem: {
       h2: "Was Tauben unter Solarmodulen anrichten",
@@ -294,8 +294,8 @@ export const segments: Segment[] = [
       "Ein verkoteter Eingangsbereich sagt mehr über ein Gebäude als jede Imagebroschüre. StadtFix sichert Fassaden, Simse und Innenhöfe mit Systemen, die wirken, ohne aufzufallen. Geplant mit Ihrem Facility Management, montiert außerhalb der Bürozeiten.",
     heroCta: "Fassade begutachten lassen",
     image: {
-      src: "/images/segments/buerokomplexe.jpg",
-      alt: "Taubenabwehr am Bürogebäude, moderne Bürofassade",
+      src: "/images/segments/buerokomplexe.webp",
+      alt: "Taubenabwehr am Bürogebäude, dezente Spikes am Glasgeländer",
     },
     problem: {
       h2: "Wo Tauben ein Bürogebäude treffen",
@@ -379,8 +379,8 @@ export const segments: Segment[] = [
       "Beim Mehrfamilienhaus ist die Taube nur die halbe Aufgabe. Die andere Hälfte heißt Zuständigkeit, Beschluss und Kostenverteilung. StadtFix liefert beides: die Montage am Gebäude und die Unterlagen, mit denen Verwaltung und Eigentümer entscheiden können.",
     heroCta: "Angebot für Ihre WEG oder Hausverwaltung",
     image: {
-      src: "/images/segments/mehrfamilienhaeuser.jpg",
-      alt: "Taubenabwehr am Mehrfamilienhaus, Balkone eines Wohngebäudes",
+      src: "/images/segments/mehrfamilienhaeuser.webp",
+      alt: "Taubenabwehr am Mehrfamilienhaus, Balkonschutznetz an einem Wohngebäude",
     },
     problem: {
       h2: "Warum Taubenprobleme im Mehrfamilienhaus liegen bleiben",
@@ -468,8 +468,8 @@ export const segments: Segment[] = [
       "Gurren ab fünf Uhr morgens, Kot auf Balkon und Terrasse, Nistmaterial in der Dachrinne: Tauben am Haus nerven nicht nur, sie kosten Substanz. StadtFix löst das mit kompakten Systemen zum Festpreis, dimensioniert für ein Zuhause statt für ein Industrieprojekt.",
     heroCta: "Unverbindliches Angebot für Ihr Zuhause",
     image: {
-      src: "/images/segments/einfamilienhaeuser.jpg",
-      alt: "Taubenabwehr am Einfamilienhaus, Dach eines Wohnhauses",
+      src: "/images/segments/einfamilienhaeuser.webp",
+      alt: "Taubenabwehr am Einfamilienhaus, Montage mit Hubarbeitsbühne",
     },
     problem: {
       h2: "Woran Sie merken, dass Tauben eingezogen sind",
@@ -557,8 +557,8 @@ export const segments: Segment[] = [
       "Tausende Besucher täglich, Gastronomie im Foodcourt, offene Eingangsbereiche: Ein Einkaufszentrum verzeiht keinen sichtbaren Taubenbefall. StadtFix sichert Atrien, Vordächer und Werbeanlagen, montiert außerhalb der Öffnungszeiten und abgestimmt mit Ihrem Center-Management.",
     heroCta: "Termin für Center-Begehung vereinbaren",
     image: {
-      src: "/images/segments/einkaufszentren.jpg",
-      alt: "Taubenabwehr im Einkaufszentrum, Glasdach eines Shoppingcenters",
+      src: "/images/segments/einkaufszentren.webp",
+      alt: "Taubenabwehr am Einkaufszentrum, Montage am Eingangsvordach",
     },
     problem: {
       h2: "Was Taubenbefall im Center konkret bedeutet",
@@ -642,8 +642,8 @@ export const segments: Segment[] = [
       "Tribünendächer und Stahlfachwerk bieten Tauben tausende geschützte Nistplätze, direkt über Sitzplätzen, Treppen und Gastro-Ständen. StadtFix sichert Großkonstruktionen mit Netzsystemen und plant die Montage in den Fenstern Ihres Veranstaltungskalenders.",
     heroCta: "Individuelles Konzept anfragen",
     image: {
-      src: "/images/segments/stadien.jpg",
-      alt: "Taubenabwehr im Stadion, Tribünendach mit Stahlkonstruktion",
+      src: "/images/segments/stadien.webp",
+      alt: "Taubenabwehr für Stadien, Netzmontage unter einer Stahldach-Konstruktion",
     },
     problem: {
       h2: "Warum Stadien ein Sonderfall sind",
@@ -727,8 +727,8 @@ export const segments: Segment[] = [
       "In der Innenstadt ist der Besiedlungsdruck am höchsten und die Fassade am empfindlichsten. StadtFix sichert Stuckgesimse, Erker und Portale mit Systemen, die man auf drei Meter nicht mehr sieht, und übernimmt bei Bedarf die Abstimmung mit der Denkmalbehörde.",
     heroCta: "Beratung für denkmalgeschützte Gebäude",
     image: {
-      src: "/images/segments/innenstadthaeuser.jpg",
-      alt: "Taubenabwehr am Altbau, historische Fassade in der Innenstadt",
+      src: "/images/segments/innenstadthaeuser.webp",
+      alt: "Taubenabwehr am Innenstadthaus, unauffällige Spikes an der Fensterbank",
     },
     problem: {
       h2: "Warum Altbauten die Lieblingsgebäude der Stadttaube sind",
