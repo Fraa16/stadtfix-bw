@@ -8,7 +8,7 @@ const stats = [
   },
   {
     value: "3",
-    unit: "Jahre",
+    unit: " Jahre",
     label: "Garantie auf jede Montage",
     text: "Hält ein System nicht, kommen wir wieder. Ohne Diskussion.",
   },

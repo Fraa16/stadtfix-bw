@@ -29,9 +29,14 @@ export function Header() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   const desktopLink = (href: string) =>
-    `relative text-[15px] font-medium transition-colors hover:text-white ${
+    `group/nav text-[15px] font-medium transition-colors hover:text-white ${
       isActive(href) ? "text-white" : "text-white/80"
-    } after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-accent after:transition-all ${
+    }`;
+
+  /* Unterstreichung auf einem inneren Span, damit sie bei allen
+     Nav-Punkten identisch am Text sitzt — unabhängig vom Link-Padding. */
+  const navLabel = (href: string) =>
+    `relative after:absolute after:-bottom-1.5 after:left-0 after:h-[2px] after:bg-accent after:transition-all ${
       isActive(href) ? "after:w-full" : "after:w-0"
     }`;
 
@@ -94,7 +99,7 @@ export function Header() {
                 href="/taubenabwehr/"
                 className={`${desktopLink("/taubenabwehr/")} flex items-center gap-1.5 py-5`}
               >
-                Taubenabwehr
+                <span className={navLabel("/taubenabwehr/")}>Taubenabwehr</span>
                 <svg
                   className="h-3 w-3 text-white/50 transition-transform group-hover:rotate-180"
                   viewBox="0 0 12 12"
@@ -133,8 +138,8 @@ export function Header() {
             </div>
 
             {navLinks.map((l) => (
-              <Link key={l.href} href={l.href} className={desktopLink(l.href)}>
-                {l.label}
+              <Link key={l.href} href={l.href} className={`${desktopLink(l.href)} py-5`}>
+                <span className={navLabel(l.href)}>{l.label}</span>
               </Link>
             ))}
 

@@ -29,7 +29,7 @@ export function TileGrid() {
             <Reveal
               key={s.slug}
               delay={(i % 3) * 90}
-              className={i === 0 ? "sm:col-span-2" : ""}
+              className={i === 0 ? "h-full sm:col-span-2" : "h-full"}
             >
               <Link
                 href={`/taubenabwehr/${s.slug}/`}

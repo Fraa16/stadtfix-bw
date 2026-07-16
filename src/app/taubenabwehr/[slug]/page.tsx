@@ -125,7 +125,7 @@ export default async function SegmentPage({
           </Reveal>
           <div className="mt-12 grid gap-5 md:grid-cols-2">
             {segment.solution.items.map((item, i) => (
-              <Reveal key={item.title} delay={(i % 2) * 80}>
+              <Reveal key={item.title} delay={(i % 2) * 80} className="h-full">
                 <div className="group h-full border border-line bg-white p-8 transition-all duration-300 hover:border-ink hover:shadow-elevated">
                   <span className="mb-4 block h-[3px] w-10 bg-accent" aria-hidden />
                   <h3 className="font-display text-[17.5px] font-bold tracking-tight">

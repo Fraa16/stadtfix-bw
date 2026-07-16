@@ -17,11 +17,6 @@ export function StepsSection() {
           {steps.map((step, i) => (
             <li key={step.title} className="relative h-full">
               <Reveal delay={i * 90}>
-                {/* Verbindungslinie */}
-                <span
-                  className="absolute left-0 right-0 top-[3.4rem] hidden h-px bg-line md:block"
-                  aria-hidden
-                />
                 <span className="ghost-number relative text-[4.5rem]">
                   {String(i + 1).padStart(2, "0")}
                 </span>

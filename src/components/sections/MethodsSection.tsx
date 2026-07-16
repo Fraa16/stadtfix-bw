@@ -46,7 +46,7 @@ export function MethodsSection() {
 
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {methods.map((m, i) => (
-            <Reveal key={m.title} delay={i * 90}>
+            <Reveal key={m.title} delay={i * 90} className="h-full">
               <div className="group flex h-full flex-col border border-line-dark bg-ink-soft">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
