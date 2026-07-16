@@ -16,14 +16,27 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSubOpen, setMobileSubOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  // Nach Klick auf einen Menüpunkt bleibt der Cursor oft über dem Panel
+  // stehen — group-hover würde es offen halten. Bis zum Verlassen unterdrücken.
+  const [dropdownSuppressed, setDropdownSuppressed] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    // Hysterese: Einklappen erst ab 80px, Ausklappen erst wieder unter 12px.
+    // Ein einzelner Schwellwert flackert, weil das Einklappen selbst die
+    // Layout-Höhe ändert und die Scroll-Position um die Schwelle pendelt.
+    const onScroll = () =>
+      setScrolled((prev) => (prev ? window.scrollY > 12 : window.scrollY > 80));
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  /** Schließt das aufgeklappte Megamenü nach Klick sofort. */
+  const closeDropdown = () => {
+    (document.activeElement as HTMLElement | null)?.blur();
+    setDropdownSuppressed(true);
+  };
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -94,7 +107,7 @@ export function Header() {
 
           {/* Desktop-Navigation */}
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Hauptnavigation">
-            <div className="group relative">
+            <div className="group relative" onMouseLeave={() => setDropdownSuppressed(false)}>
               <Link
                 href="/taubenabwehr/"
                 className={`${desktopLink("/taubenabwehr/")} flex items-center gap-1.5 py-5`}
@@ -110,10 +123,17 @@ export function Header() {
                 </svg>
               </Link>
               {/* Dropdown: alle 9 Einsatzbereiche */}
-              <div className="invisible absolute left-1/2 top-full w-[640px] -translate-x-1/2 pt-1 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              <div
+                className={`invisible absolute left-1/2 top-full w-[640px] -translate-x-1/2 pt-1 opacity-0 transition-all duration-150 ${
+                  dropdownSuppressed
+                    ? ""
+                    : "group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100"
+                }`}
+              >
                 <div className="grid grid-cols-2 gap-x-2 border border-line-dark bg-ink-soft p-4 shadow-elevated">
                   <Link
                     href="/taubenabwehr/"
+                    onClick={closeDropdown}
                     className="col-span-2 mb-2 flex items-center justify-between border-b border-line-dark px-3 pb-3 pt-1 font-display text-[13px] font-bold uppercase tracking-[0.15em] text-accent hover:text-white"
                   >
                     Alle Methoden im Überblick
@@ -123,6 +143,7 @@ export function Header() {
                     <Link
                       key={s.slug}
                       href={`/taubenabwehr/${s.slug}/`}
+                      onClick={closeDropdown}
                       className="border-l-2 border-transparent px-3 py-2.5 transition-colors hover:border-accent hover:bg-ink"
                     >
                       <span className="block text-[14.5px] font-semibold text-white/90">

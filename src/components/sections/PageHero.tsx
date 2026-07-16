@@ -62,14 +62,14 @@ export function PageHero({ kicker, title, subline, cta, crumbs, image }: PageHer
             {textBlock}
           </div>
         </div>
-        <div className="relative hidden min-h-full lg:block">
-          <div className="absolute inset-0 [clip-path:polygon(10%_0,100%_0,100%_100%,0_100%)]">
+        <div className="relative min-h-[220px] sm:min-h-[280px] lg:min-h-full">
+          <div className="absolute inset-0 lg:[clip-path:polygon(10%_0,100%_0,100%_100%,0_100%)]">
             <Image
               src={image.src}
               alt={image.alt}
               fill
               priority
-              sizes="38vw"
+              sizes="(min-width: 1024px) 38vw, 100vw"
               className="object-cover"
             />
             <div

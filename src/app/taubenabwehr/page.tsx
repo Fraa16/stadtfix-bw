@@ -75,7 +75,7 @@ export default function TaubenabwehrHubPage() {
         ]}
         image={{
           src: "/images/hero.webp",
-          alt: "Taube landet auf Edelstahl-Spikes einer gesicherten Mauer",
+          alt: "Stadttaube in Nahaufnahme an einer Hausfassade",
         }}
       />
 

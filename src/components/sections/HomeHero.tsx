@@ -45,7 +45,7 @@ export function HomeHero() {
           <div className="absolute inset-0 lg:[clip-path:polygon(9%_0,100%_0,100%_100%,0_100%)]">
             <Image
               src="/images/hero.webp"
-              alt="Taube landet auf Edelstahl-Spikes einer gesicherten Mauer"
+              alt="Stadttaube in Nahaufnahme an einer Hausfassade"
               fill
               priority
               sizes="(min-width: 1024px) 44vw, 100vw"

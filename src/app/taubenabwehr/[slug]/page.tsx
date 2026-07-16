@@ -71,11 +71,11 @@ export default async function SegmentPage({
             <div className="mt-12 space-y-10">
               {segment.problem.items.map((item, i) => (
                 <Reveal key={item.title} delay={i * 60}>
-                  <div className="flex gap-6">
-                    <span className="ghost-number pt-1 text-[2.6rem]" aria-hidden>
+                  <div className="flex gap-4 sm:gap-6">
+                    <span className="ghost-number pt-1 text-[2rem] sm:text-[2.6rem]" aria-hidden>
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <div className="border-l border-line pl-6">
+                    <div className="border-l border-line pl-4 sm:pl-6">
                       <h3 className="font-display text-[17.5px] font-bold tracking-tight">
                         {item.title}
                       </h3>
