@@ -7,7 +7,7 @@ import { localBusinessSchema } from "@/lib/schema";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Kontakt: Taubenabwehr anfragen | StadtFix Nürtingen",
+  title: { absolute: "Kontakt: Taubenabwehr anfragen | StadtFix Nürtingen" },
   description:
     "Taubenproblem? Beschreiben Sie es kurz: StadtFix antwortet innerhalb von 24 Stunden mit Terminvorschlag. Begehung und Angebot kostenlos. Nürtingen und ganz BW.",
   alternates: { canonical: "/kontakt/" },
@@ -56,16 +56,29 @@ export default function KontaktPage() {
                 Lieber direkt anrufen?
               </h2>
               <p className="mt-3 text-[15px] leading-relaxed text-steel">
-                <span className="placeholder-fact">{site.placeholders.phone}</span>, erreichbar{" "}
+                <a
+                  href={`tel:${site.contact.phoneE164}`}
+                  className="font-semibold text-ink underline decoration-line underline-offset-4 hover:decoration-accent"
+                >
+                  {site.contact.phoneDisplay}
+                </a>
+                , erreichbar{" "}
                 <span className="placeholder-fact">{site.placeholders.phoneHours}</span>.
                 <br />
                 Außerhalb der Zeiten: Sprechen Sie aufs Band oder schreiben Sie
                 uns, wir melden uns am nächsten Werktag.
               </p>
               <p className="mt-4 text-[15px] text-steel">
-                <strong className="text-ink">Adresse:</strong>{" "}
-                <span className="placeholder-fact">{site.placeholders.street}</span>,{" "}
-                <span className="placeholder-fact">{site.placeholders.zipCity}</span>
+                <strong className="text-ink">E-Mail:</strong>{" "}
+                <a
+                  href={`mailto:${site.contact.email}`}
+                  className="underline decoration-line underline-offset-4 hover:decoration-accent"
+                >
+                  {site.contact.email}
+                </a>
+                <br />
+                <strong className="text-ink">Adresse:</strong> {site.contact.street},{" "}
+                {site.contact.zipCity}
               </p>
             </div>
 

@@ -13,7 +13,7 @@ import { localBusinessSchema, faqPageSchema, howToSchema } from "@/lib/schema";
 import { homeFaqs, steps } from "@/content/home";
 
 export const metadata: Metadata = {
-  title: "Taubenabwehr Baden-Württemberg | 3 Jahre Garantie | StadtFix",
+  title: { absolute: "Taubenabwehr Baden-Württemberg | 3 Jahre Garantie | StadtFix" },
   description:
     "Taubenabwehr für Gewerbe und Privat in Nürtingen, Stuttgart und ganz Baden-Württemberg. Edelstahl-Spikes und Netze, tierschutzkonform, 3 Jahre Garantie. Jetzt anfragen.",
   alternates: { canonical: "/" },

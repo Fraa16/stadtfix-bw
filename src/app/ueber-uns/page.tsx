@@ -8,7 +8,7 @@ import { localBusinessSchema } from "@/lib/schema";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Über StadtFix | Taubenabwehr aus Nürtingen",
+  title: { absolute: "Über StadtFix | Taubenabwehr aus Nürtingen" },
   description:
     "StadtFix ist ein Fachbetrieb für Taubenabwehr aus Nürtingen: Edelstahl statt Billigmaterial, 3 Jahre Garantie, ein Ansprechpartner von Begehung bis Montage.",
   alternates: { canonical: "/ueber-uns/" },
@@ -61,7 +61,7 @@ export default function UeberUnsPage() {
               Wer hinter StadtFix steht
             </h2>
             <p className="mt-5 text-[16px] leading-relaxed text-steel">
-              <span className="placeholder-fact">{site.placeholders.founderName}</span> hat{" "}
+              {site.founder} hat{" "}
               <span className="placeholder-fact">{site.placeholders.yearsExperience} Jahre</span>{" "}
               in der Taubenabwehr gearbeitet und dabei zahlreiche Montagen an
               Parkhäusern, Industriehallen und Wohnhäusern ausgeführt, bevor er{" "}
@@ -103,7 +103,7 @@ export default function UeberUnsPage() {
 
       {/* Einsatzgebiet */}
       <section className="py-16 md:py-24">
-        <div className="container-site max-w-3xl !mx-auto">
+        <div className="container-site max-w-3xl">
           <Kicker>Einsatzgebiet</Kicker>
           <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-3xl">
             Wo wir im Einsatz sind
@@ -132,7 +132,7 @@ export default function UeberUnsPage() {
 
       {/* Arbeitsweise */}
       <section className="border-t border-line bg-ink py-16 text-white md:py-24">
-        <div className="container-site max-w-3xl !mx-auto">
+        <div className="container-site max-w-3xl">
           <Kicker>Arbeitsweise</Kicker>
           <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-3xl">
             Wie wir arbeiten

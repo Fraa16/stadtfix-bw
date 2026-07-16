@@ -5,10 +5,9 @@ import { CtaSection } from "@/components/sections/CtaSection";
 import { Kicker } from "@/components/Kicker";
 import { JsonLd } from "@/components/JsonLd";
 import { faqPageSchema } from "@/lib/schema";
-import { segments } from "@/content/segments";
 
 export const metadata: Metadata = {
-  title: "Taubenabwehr: Methoden, Kosten, Ablauf | StadtFix",
+  title: { absolute: "Taubenabwehr: Methoden, Kosten, Ablauf | StadtFix" },
   description:
     "Welche Taubenabwehr wirkt bei welchem Gebäude? Spikes, Netze, Vergrämung im Überblick: tierschutzkonform, mit 3 Jahren Garantie. Von StadtFix aus Nürtingen.",
   alternates: { canonical: "/taubenabwehr/" },
@@ -77,7 +76,7 @@ export default function TaubenabwehrHubPage() {
 
       {/* Direct-Answer (GEO) */}
       <section className="py-16 md:py-20">
-        <div className="container-site max-w-3xl !mx-auto">
+        <div className="container-site max-w-3xl">
           <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-3xl">
             Warum ist Taubenabwehr am Gebäude notwendig?
           </h2>
@@ -155,7 +154,7 @@ export default function TaubenabwehrHubPage() {
 
       {/* Rechtliches */}
       <section className="border-t border-line bg-mist py-16 md:py-24">
-        <div className="container-site max-w-3xl !mx-auto">
+        <div className="container-site max-w-3xl">
           <Kicker>Rechtliches</Kicker>
           <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-3xl">
             Was ist bei der Taubenabwehr erlaubt?

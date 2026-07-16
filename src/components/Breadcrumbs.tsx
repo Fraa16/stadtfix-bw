@@ -18,7 +18,10 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
                   {item.name}
                 </Link>
               ) : (
-                <span aria-current="page" className="text-white/80">
+                <span
+                  aria-current="page"
+                  className="inline-block max-w-[280px] truncate align-bottom text-white/80 sm:max-w-md"
+                >
                   {item.name}
                 </span>
               )}

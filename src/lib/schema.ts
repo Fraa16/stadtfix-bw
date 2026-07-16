@@ -10,11 +10,16 @@ export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: site.name,
+    name: site.legalName,
     description: site.entitySentence,
     url: site.url,
+    telephone: site.contact.phoneE164,
+    email: site.contact.email,
+    founder: { "@type": "Person", name: site.founder },
     address: {
       "@type": "PostalAddress",
+      streetAddress: site.contact.street,
+      postalCode: "72622",
       addressLocality: "Nürtingen",
       addressRegion: "Baden-Württemberg",
       addressCountry: "DE",
@@ -91,7 +96,7 @@ export function blogPostingSchema(post: {
     ...(post.image ? { image: `${site.url}${post.image}` } : {}),
     author: {
       "@type": "Person",
-      name: site.placeholders.founderName, // TODO: echten Gründernamen in site.ts eintragen
+      name: site.founder,
     },
     publisher: { "@type": "Organization", name: site.name, url: site.url },
     inLanguage: "de-DE",

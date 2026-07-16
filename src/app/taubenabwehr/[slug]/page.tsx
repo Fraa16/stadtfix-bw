@@ -25,7 +25,7 @@ export async function generateMetadata({
   const segment = getSegment(slug);
   if (!segment) return {};
   return {
-    title: `${segment.metaTitle} | StadtFix`,
+    title: { absolute: `${segment.metaTitle} | StadtFix` },
     description: segment.metaDescription,
     alternates: { canonical: `/taubenabwehr/${segment.slug}/` },
   };
@@ -75,7 +75,7 @@ export default async function SegmentPage({
               ))}
             </div>
           </div>
-          <div className="relative hidden aspect-[3/4] overflow-hidden border border-line lg:block">
+          <div className="relative hidden aspect-[3/2] self-start overflow-hidden border border-line lg:block">
             <Image
               src={segment.image.src}
               alt={segment.image.alt}

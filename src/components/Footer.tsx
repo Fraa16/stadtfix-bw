@@ -15,12 +15,17 @@ export function Footer() {
               {site.entitySentence}
             </p>
             <p className="mt-5 text-[15px] text-steel-light">
-              <span className="placeholder-fact">{site.placeholders.street}</span>
-              {", "}
-              <span className="placeholder-fact">{site.placeholders.zipCity}</span>
+              {site.contact.street}, {site.contact.zipCity}
               <br />
               Telefon:{" "}
-              <span className="placeholder-fact">{site.placeholders.phone}</span>
+              <a href={`tel:${site.contact.phoneE164}`} className="hover:text-white">
+                {site.contact.phoneDisplay}
+              </a>
+              <br />
+              E-Mail:{" "}
+              <a href={`mailto:${site.contact.email}`} className="hover:text-white">
+                {site.contact.email}
+              </a>
             </p>
           </div>
 

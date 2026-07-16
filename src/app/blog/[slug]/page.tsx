@@ -26,7 +26,7 @@ export async function generateMetadata({
   const post = getPost(slug);
   if (!post) return {};
   return {
-    title: `${post.metaTitle} | StadtFix`,
+    title: { absolute: `${post.metaTitle} | StadtFix` },
     description: post.description,
     alternates: { canonical: `/blog/${post.slug}/` },
   };
@@ -122,7 +122,7 @@ export default async function BlogArticlePage({
 
       {/* Artikel-Kopf */}
       <header className="bg-ink text-white">
-        <div className="container-site max-w-3xl !mx-auto py-14 md:py-20">
+        <div className="container-site max-w-3xl py-14 md:py-20">
           <Breadcrumbs
             items={[
               { name: "Startseite", href: "/" },
@@ -139,16 +139,13 @@ export default async function BlogArticlePage({
           <p className="mt-5 text-[14px] text-white/60">
             <time dateTime={post.datePublished}>{date}</time>
             {" · "}
-            <span className="placeholder-fact !bg-transparent !text-white/60">
-              {site.placeholders.founderName}
-            </span>
-            , StadtFix
+            {site.founder}, StadtFix
           </p>
         </div>
       </header>
 
       <article className="py-12 md:py-16">
-        <div className="container-site max-w-3xl !mx-auto">
+        <div className="container-site max-w-3xl">
           <div className="relative aspect-[16/9] overflow-hidden border border-line">
             <Image
               src={post.image.src}
@@ -189,9 +186,7 @@ export default async function BlogArticlePage({
               S<span className="text-accent">F</span>
             </div>
             <div>
-              <p className="font-display text-[15px] font-bold">
-                <span className="placeholder-fact">{site.placeholders.founderName}</span>
-              </p>
+              <p className="font-display text-[15px] font-bold">{site.founder}</p>
               <p className="text-[14px] text-steel">
                 <span className="placeholder-fact">{site.placeholders.yearsExperience}</span>{" "}
                 Jahre Taubenabwehr in Baden-Württemberg · Gründer von StadtFix

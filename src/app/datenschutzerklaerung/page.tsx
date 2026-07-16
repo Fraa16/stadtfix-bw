@@ -25,7 +25,7 @@ export default function DatenschutzPage() {
         ]}
       />
       <section className="py-16">
-        <div className="container-site max-w-3xl !mx-auto space-y-8 text-[16px] leading-relaxed">
+        <div className="container-site max-w-3xl space-y-8 text-[16px] leading-relaxed">
           <p className="border border-line bg-mist p-5 text-[14px] text-steel">
             Hinweis: Diese Seite ist ein Platzhalter-Gerüst. Die vollständige
             Datenschutzerklärung wird vor dem Livegang von der bestehenden
