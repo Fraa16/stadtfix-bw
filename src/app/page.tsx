@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { HomeHero } from "@/components/sections/HomeHero";
-import { TrustBar } from "@/components/sections/TrustBar";
+import { StatsBand } from "@/components/sections/StatsBand";
 import { TileGrid } from "@/components/sections/TileGrid";
 import { MethodsSection } from "@/components/sections/MethodsSection";
 import { StepsSection } from "@/components/sections/StepsSection";
@@ -27,18 +27,19 @@ export default function HomePage() {
       <JsonLd data={howToSchema("Wie läuft ein Projekt mit StadtFix ab?", steps)} />
 
       <HomeHero />
-      <TrustBar />
+      <StatsBand />
       <TileGrid />
       <MethodsSection />
       <StepsSection />
       <AboutTeaser />
       <BlogTeaser />
-      <FaqSection heading="Häufige Fragen zur Taubenabwehr" faqs={homeFaqs} />
+      <FaqSection heading="Häufige Fragen zur Taubenabwehr" faqs={homeFaqs} n="06" />
       <CtaSection
         lines={["Tauben am Gebäude?", "Klären wir vor Ort."]}
         body="Kostenlose Begehung, festes Angebot, keine Verpflichtung. Beschreiben Sie kurz das Problem. Wir melden uns innerhalb von 24 Stunden."
         button="Begehung anfragen"
         micro="Antwort innerhalb von 24 Stunden. Begehung und Angebot sind kostenlos."
+        image="/images/ueber-uns.webp"
       />
     </>
   );

@@ -10,7 +10,7 @@ export function BlogTeaser() {
       <div className="container-site">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
-            <Kicker>Ratgeber</Kicker>
+            <Kicker n="05">Ratgeber</Kicker>
             <h2 className="font-display text-3xl font-extrabold tracking-tight md:text-4xl">
               Antworten, bevor Sie anfragen
             </h2>

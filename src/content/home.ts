@@ -1,35 +1,5 @@
 import type { Faq } from "@/content/segments";
 
-export const trustItems = [
-  {
-    title: "3 Jahre Garantie auf jede Montage.",
-    text: "Hält ein System nicht, kommen wir wieder. Ohne Diskussion.",
-  },
-  {
-    title: "Rostfreier Edelstahl statt Baumarkt-Ware.",
-    text: "Plastik-Spikes verspröden nach zwei Wintern. Unsere Systeme nicht.",
-  },
-  {
-    title: "Antwort innerhalb von 24 Stunden.",
-    text: "Anfrage heute, Rückmeldung morgen, meist mit Terminvorschlag für die Begehung.",
-  },
-];
-
-export const methods = [
-  {
-    title: "Edelstahl-Spikes",
-    text: "Verhindern das Landen auf Simsen, Trägern und Dachrinnen. Rostfrei, UV-beständig und für die Tiere ungefährlich: Sie finden schlicht keinen Halt.",
-  },
-  {
-    title: "Schutznetze",
-    text: "Verschließen Nistbereiche komplett: Balkone, Lichthöfe, Hallendecken, Parkdecks. Fachgerecht gespannt sind sie aus wenigen Metern Entfernung kaum sichtbar.",
-  },
-  {
-    title: "Vergrämungssysteme",
-    text: "Für Flächen, auf denen Spikes und Netze nicht montierbar sind. Wir setzen sie gezielt ein: nicht als Allheilmittel, sondern als Ergänzung.",
-  },
-];
-
 export const steps = [
   {
     title: "Anfrage",

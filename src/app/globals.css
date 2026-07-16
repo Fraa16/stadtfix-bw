@@ -34,6 +34,11 @@ body {
   color: #fff;
 }
 
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 @utility container-site {
   margin-inline: auto;
   width: 100%;
@@ -42,6 +47,51 @@ body {
   @media (width >= 48rem) {
     padding-inline: 2rem;
   }
+}
+
+/* Scroll-Reveal: unsichtbarer Startzustand nur mit aktivem JavaScript
+   (html.js wird per Inline-Script gesetzt) — Crawler sehen alles sofort. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.55s ease-out var(--reveal-delay, 0ms),
+    transform 0.55s ease-out var(--reveal-delay, 0ms);
+}
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Feines Linienraster für dunkle Flächen — ruhige Tiefe statt leerer Fläche */
+@utility bg-grid-dark {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+/* Eine einzige, weiche Elevations-Stufe (Dropdown, herausgehobene Karten) */
+@utility shadow-elevated {
+  box-shadow: 0 12px 40px -12px rgb(22 24 28 / 0.25);
+}
+
+/* Große "Geister"-Ziffern als Gestaltungselement */
+@utility ghost-number {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-steel-light);
+  opacity: 0.55;
+  user-select: none;
 }
 
 /* Sichtbarer, dezenter Fakten-Platzhalter (vom Kunden zu bestätigen) */

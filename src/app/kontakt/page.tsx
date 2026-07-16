@@ -43,15 +43,15 @@ export default function KontaktPage() {
         ]}
       />
 
-      <section className="py-16 md:py-24">
-        <div className="container-site grid gap-14 lg:grid-cols-[1fr_380px]">
-          <div>
+      <section className="bg-mist py-16 md:py-24">
+        <div className="container-site grid gap-12 lg:grid-cols-[1fr_380px]">
+          <div className="border border-line bg-white p-7 shadow-elevated md:p-10">
             <h2 className="sr-only">Anfrageformular</h2>
             <ContactForm />
           </div>
 
-          <aside className="space-y-10">
-            <div className="border border-line bg-mist p-7">
+          <aside className="space-y-10 self-start lg:sticky lg:top-28">
+            <div className="border border-line bg-white p-7">
               <h2 className="font-display text-[18px] font-bold tracking-tight">
                 Lieber direkt anrufen?
               </h2>

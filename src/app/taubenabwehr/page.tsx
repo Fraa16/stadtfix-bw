@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { Kicker } from "@/components/Kicker";
+import { Reveal } from "@/components/Reveal";
 import { JsonLd } from "@/components/JsonLd";
 import { faqPageSchema } from "@/lib/schema";
 
@@ -72,12 +73,17 @@ export default function TaubenabwehrHubPage() {
           { name: "Startseite", href: "/" },
           { name: "Taubenabwehr", href: "/taubenabwehr/" },
         ]}
+        image={{
+          src: "/images/hero.webp",
+          alt: "Taube landet auf Edelstahl-Spikes einer gesicherten Mauer",
+        }}
       />
 
       {/* Direct-Answer (GEO) */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-24">
         <div className="container-site max-w-3xl">
-          <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-3xl">
+          <Kicker n="01">Warum überhaupt?</Kicker>
+          <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-[2.25rem]">
             Warum ist Taubenabwehr am Gebäude notwendig?
           </h2>
           <p className="mt-5 text-[17px] leading-relaxed text-steel">
@@ -94,16 +100,21 @@ export default function TaubenabwehrHubPage() {
       {/* Methodenüberblick */}
       <section className="border-t border-line bg-mist py-16 md:py-24">
         <div className="container-site">
-          <Kicker>Systeme</Kicker>
-          <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-3xl">
-            Welche Methoden zur Taubenabwehr gibt es?
-          </h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {methodDetails.map((m) => (
-              <div key={m.title} className="border border-line bg-white p-7">
-                <h3 className="font-display text-[18px] font-bold tracking-tight">{m.title}</h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-steel">{m.text}</p>
-              </div>
+          <Reveal>
+            <Kicker n="02">Systeme</Kicker>
+            <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-[2.25rem]">
+              Welche Methoden zur Taubenabwehr gibt es?
+            </h2>
+          </Reveal>
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {methodDetails.map((m, i) => (
+              <Reveal key={m.title} delay={(i % 3) * 80}>
+                <div className="group h-full border border-line bg-white p-8 transition-all duration-300 hover:border-ink hover:shadow-elevated">
+                  <span className="mb-4 block h-[3px] w-10 bg-accent" aria-hidden />
+                  <h3 className="font-display text-[18px] font-bold tracking-tight">{m.title}</h3>
+                  <p className="mt-3 text-[15px] leading-relaxed text-steel">{m.text}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -112,8 +123,8 @@ export default function TaubenabwehrHubPage() {
       {/* Zuordnungstabelle */}
       <section className="py-16 md:py-24">
         <div className="container-site">
-          <Kicker>Einsatzbereiche</Kicker>
-          <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-3xl">
+          <Kicker n="03">Einsatzbereiche</Kicker>
+          <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-[2.25rem]">
             Welche Methode passt zu welchem Gebäude?
           </h2>
           <div className="mt-10 overflow-x-auto border border-line">
@@ -155,8 +166,8 @@ export default function TaubenabwehrHubPage() {
       {/* Rechtliches */}
       <section className="border-t border-line bg-mist py-16 md:py-24">
         <div className="container-site max-w-3xl">
-          <Kicker>Rechtliches</Kicker>
-          <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-3xl">
+          <Kicker n="04">Rechtliches</Kicker>
+          <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-[2.25rem]">
             Was ist bei der Taubenabwehr erlaubt?
           </h2>
           <p className="mt-5 text-[17px] leading-relaxed text-steel">

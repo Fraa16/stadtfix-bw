@@ -13,7 +13,20 @@ const browser = await chromium.launch({
 });
 const page = await browser.newPage({ viewport: { width, height: 900 } });
 await page.goto(url, { waitUntil: "load", timeout: 45000 });
-await page.waitForTimeout(800);
+await page.waitForTimeout(600);
+// Einmal durchscrollen, damit Reveal-Animationen und Lazy-Images ausgelöst sind
+if (fullPage) {
+  await page.evaluate(async () => {
+    document.documentElement.style.scrollBehavior = "auto";
+    const step = window.innerHeight * 0.7;
+    for (let y = 0; y < document.body.scrollHeight; y += step) {
+      window.scrollTo(0, y);
+      await new Promise((r) => setTimeout(r, 150));
+    }
+    window.scrollTo(0, 0);
+  });
+  await page.waitForTimeout(800);
+}
 await page.screenshot({ path: out, fullPage });
 await browser.close();
 console.log("✓", out);

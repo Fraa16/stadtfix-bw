@@ -5,8 +5,8 @@ import { Wordmark } from "@/components/Wordmark";
 
 export function Footer() {
   return (
-    <footer className="bg-ink text-white">
-      <div className="container-site py-14">
+    <footer className="border-t-2 border-accent bg-ink text-white">
+      <div className="container-site py-16">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Entity-Satz (GEO) */}
           <div className="lg:col-span-2 max-w-md">

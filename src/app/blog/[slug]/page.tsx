@@ -38,7 +38,7 @@ function renderBlock(block: Block, i: number) {
       return (
         <h2
           key={i}
-          className="mt-12 font-display text-2xl font-extrabold tracking-tight md:text-[28px]"
+          className="mt-14 border-t border-line pt-10 font-display text-2xl font-extrabold tracking-tight md:text-[28px]"
         >
           {block.text}
         </h2>

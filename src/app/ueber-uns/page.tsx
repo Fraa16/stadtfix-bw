@@ -56,7 +56,7 @@ export default function UeberUnsPage() {
       <section className="py-16 md:py-24">
         <div className="container-site grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <Kicker>Werdegang</Kicker>
+            <Kicker n="01">Werdegang</Kicker>
             <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-3xl">
               Wer hinter StadtFix steht
             </h2>
@@ -71,7 +71,9 @@ export default function UeberUnsPage() {
               hinterher selbst montiert.
             </p>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden border border-line bg-mist">
+          <div className="relative mr-4 mt-4">
+            <div className="absolute -right-4 -top-4 h-full w-full border border-accent" aria-hidden />
+            <div className="relative aspect-[4/3] overflow-hidden bg-mist">
             <Image
               src="/images/ueber-uns.webp"
               alt="Taubenabwehr-Montage an einer Fassade, Fachbetrieb StadtFix aus Nürtingen"
@@ -79,6 +81,7 @@ export default function UeberUnsPage() {
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
             />
+            </div>
           </div>
         </div>
       </section>
@@ -86,7 +89,7 @@ export default function UeberUnsPage() {
       {/* Warum StadtFix */}
       <section className="border-t border-line bg-mist py-16 md:py-24">
         <div className="container-site">
-          <Kicker>Warum StadtFix</Kicker>
+          <Kicker n="02">Warum StadtFix</Kicker>
           <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-3xl">
             Woran Sie den Unterschied merken
           </h2>
@@ -104,7 +107,7 @@ export default function UeberUnsPage() {
       {/* Einsatzgebiet */}
       <section className="py-16 md:py-24">
         <div className="container-site max-w-3xl">
-          <Kicker>Einsatzgebiet</Kicker>
+          <Kicker n="03">Einsatzgebiet</Kicker>
           <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-3xl">
             Wo wir im Einsatz sind
           </h2>
@@ -133,7 +136,7 @@ export default function UeberUnsPage() {
       {/* Arbeitsweise */}
       <section className="border-t border-line bg-ink py-16 text-white md:py-24">
         <div className="container-site max-w-3xl">
-          <Kicker>Arbeitsweise</Kicker>
+          <Kicker n="04">Arbeitsweise</Kicker>
           <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-3xl">
             Wie wir arbeiten
           </h2>
