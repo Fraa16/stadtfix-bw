@@ -19,7 +19,7 @@ const methods = [
   {
     title: "Vergrämungssysteme",
     text: "Für Flächen, auf denen Spikes und Netze nicht montierbar sind. Wir setzen sie gezielt ein: nicht als Allheilmittel, sondern als Ergänzung.",
-    image: "/images/blog/tierfreundliche-taubenvergraemung.webp",
+    image: "/images/methods/vergraemung.webp",
     alt: "Taube fliegt unverletzt von einer gesicherten Fläche auf",
   },
 ];
