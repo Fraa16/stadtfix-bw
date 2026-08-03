@@ -124,10 +124,28 @@ export function CookieConsent() {
         <div
           role="region"
           aria-label="Cookie-Hinweis"
-          className="fixed inset-x-0 bottom-0 z-[70] border-t border-line bg-white shadow-elevated"
+          className="fixed inset-x-4 bottom-4 z-[70] sm:inset-x-auto sm:bottom-6 sm:left-6 sm:w-[400px]"
         >
-          <div className="container-site flex flex-col gap-4 py-5 md:flex-row md:items-center md:justify-between md:gap-8">
-            <p className="max-w-2xl text-[14px] leading-relaxed text-steel">
+          <div className="border border-line bg-white p-6 shadow-elevated">
+            <div className="flex items-center gap-2.5">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={1.8}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-5 w-5 text-accent"
+                aria-hidden
+              >
+                <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5" />
+                <path d="M8.5 8.5v.01M16 15.5v.01M12 12v.01M11 17v.01M7 14v.01" />
+              </svg>
+              <h2 className="font-display text-[13px] font-bold uppercase tracking-[0.12em] text-ink">
+                Datenschutz
+              </h2>
+            </div>
+            <p className="mt-3 text-[13.5px] leading-relaxed text-steel">
               Wir verwenden nur technisch notwendige Cookies. Optionale Cookies
               für Statistik und externe Medien setzen wir ausschließlich mit
               Ihrer Einwilligung. Mehr dazu in der{" "}
@@ -139,17 +157,29 @@ export function CookieConsent() {
               </Link>
               .
             </p>
-            <div className="flex flex-wrap items-center gap-3">
-              <button type="button" onClick={() => setOpen(true)} className={btnGhost}>
-                Einstellungen
-              </button>
-              <button type="button" onClick={rejectAll} className={btnSolid}>
+            <div className="mt-5 grid grid-cols-2 gap-2.5">
+              <button
+                type="button"
+                onClick={rejectAll}
+                className={`${btnSolid} w-full whitespace-nowrap !px-3 !text-[12px] !tracking-[0.06em]`}
+              >
                 Nur notwendige
               </button>
-              <button type="button" onClick={acceptAll} className={btnPrimary}>
-                Alle akzeptieren
+              <button
+                type="button"
+                onClick={acceptAll}
+                className={`${btnPrimary} w-full whitespace-nowrap !px-3 !text-[12px] !tracking-[0.06em]`}
+              >
+                Akzeptieren
               </button>
             </div>
+            <button
+              type="button"
+              onClick={() => setOpen(true)}
+              className="mt-3 w-full text-center font-display text-[11.5px] font-semibold uppercase tracking-[0.12em] text-steel underline decoration-line underline-offset-4 transition-colors hover:text-accent"
+            >
+              Einstellungen anpassen
+            </button>
           </div>
         </div>
       )}
