@@ -31,6 +31,41 @@ export default function DatenschutzPage() {
             Datenschutzerklärung wird vor dem Livegang von der bestehenden
             Website übernommen bzw. DSGVO-konform erstellt.
           </p>
+
+          <div>
+            <h2 className="font-display text-xl font-bold">Cookies und Einwilligung</h2>
+            <p className="mt-3 text-steel">
+              Diese Website verwendet standardmäßig ausschließlich technisch
+              notwendige Cookies. Dazu gehört ein Cookie, das Ihre
+              Cookie-Auswahl speichert:
+            </p>
+            <ul className="mt-3 list-disc space-y-1 pl-5 text-steel">
+              <li>
+                <strong className="font-semibold text-ink">sf_consent</strong>{" "}
+                (notwendig): speichert Ihre Einwilligungs-Entscheidung, damit der
+                Cookie-Hinweis nicht bei jedem Besuch erneut erscheint.
+                Speicherdauer: rund 6 Monate.
+              </li>
+            </ul>
+            <p className="mt-3 text-steel">
+              Optionale Cookies und Dienste teilen wir in die Kategorien{" "}
+              <strong className="font-semibold text-ink">Statistik</strong> und{" "}
+              <strong className="font-semibold text-ink">Marketing / Externe
+              Medien</strong> ein. Diese werden erst gesetzt bzw. geladen, wenn
+              Sie im Cookie-Banner ausdrücklich zustimmen (Opt-in). Ohne Ihre
+              Einwilligung findet in diesen Kategorien keine Verarbeitung statt.
+            </p>
+            <p className="mt-3 text-steel">
+              Ihre Einwilligung ist freiwillig und jederzeit mit Wirkung für die
+              Zukunft widerrufbar. Sie können Ihre Auswahl über den Link{" "}
+              <strong className="font-semibold text-ink">
+                „Cookie-Einstellungen"
+              </strong>{" "}
+              im Footer jederzeit anpassen. Rechtsgrundlage ist § 25 Abs. 1 TDDDG
+              in Verbindung mit Art. 6 Abs. 1 lit. a DSGVO (Einwilligung); für
+              notwendige Cookies § 25 Abs. 2 TDDDG.
+            </p>
+          </div>
           {[
             "Verantwortlicher",
             "Erhebung und Speicherung personenbezogener Daten",
