@@ -62,10 +62,10 @@ export default function UeberUnsPage() {
             </h2>
             <p className="mt-5 text-[16px] leading-relaxed text-steel">
               {site.founder} hat{" "}
-              <span className="placeholder-fact">{site.placeholders.yearsExperience} Jahre</span>{" "}
+              {site.facts.yearsExperience} Jahre{" "}
               in der Taubenabwehr gearbeitet und dabei zahlreiche Montagen an
               Parkhäusern, Industriehallen und Wohnhäusern ausgeführt, bevor er{" "}
-              <span className="placeholder-fact">{site.placeholders.foundingYear}</span>{" "}
+              {site.facts.foundingYear}{" "}
               StadtFix gegründet hat. Das heißt für Sie: Bei der Begehung steht
               kein Verkäufer auf Ihrem Dach, sondern jemand, der das System
               hinterher selbst montiert.

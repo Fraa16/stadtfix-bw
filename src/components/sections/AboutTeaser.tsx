@@ -16,7 +16,7 @@ export function AboutTeaser() {
           <p className="mt-6 text-[16.5px] leading-relaxed text-steel">
             StadtFix ist ein Fachbetrieb für Taubenabwehr mit Sitz in Nürtingen.{" "}
             {site.founder} hat{" "}
-            <span className="placeholder-fact">{site.placeholders.yearsExperience} Jahre</span>{" "}
+            {site.facts.yearsExperience} Jahre{" "}
             in der Branche gearbeitet, bevor er StadtFix gegründet hat. Sie
             sprechen bei Begehung, Angebot und Montage mit derselben Person.
           </p>

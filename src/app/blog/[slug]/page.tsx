@@ -188,7 +188,7 @@ export default async function BlogArticlePage({
             <div>
               <p className="font-display text-[15px] font-bold">{site.founder}</p>
               <p className="text-[14px] text-steel">
-                <span className="placeholder-fact">{site.placeholders.yearsExperience}</span>{" "}
+                {site.facts.yearsExperience}{" "}
                 Jahre Taubenabwehr in Baden-Württemberg · Gründer von StadtFix
               </p>
             </div>
