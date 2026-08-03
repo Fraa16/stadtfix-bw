@@ -2,6 +2,7 @@ import Link from "next/link";
 import { segments } from "@/content/segments";
 import { site } from "@/content/site";
 import { Wordmark } from "@/components/Wordmark";
+import { CookieSettingsLink } from "@/components/consent/CookieSettingsLink";
 
 export function Footer() {
   return (
@@ -86,6 +87,9 @@ export function Footer() {
                 >
                   Datenschutzerklärung
                 </Link>
+              </li>
+              <li>
+                <CookieSettingsLink className="text-[14px] text-steel-light hover:text-white" />
               </li>
             </ul>
           </nav>
