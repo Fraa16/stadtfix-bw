@@ -63,7 +63,7 @@ export default function KontaktPage() {
                   {site.contact.phoneDisplay}
                 </a>
                 , erreichbar{" "}
-                <span className="placeholder-fact">{site.placeholders.phoneHours}</span>.
+                {site.facts.phoneHours}.
                 <br />
                 Außerhalb der Zeiten: Sprechen Sie aufs Band oder schreiben Sie
                 uns, wir melden uns am nächsten Werktag.

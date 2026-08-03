@@ -1,8 +1,7 @@
 /**
  * Zentrale Website-Konfiguration.
  *
- * Werte in `placeholders` sind noch offen und erscheinen als sichtbare,
- * dezente Platzhalter auf der Seite, bis sie hier eingetragen werden.
+ * Bestätigte Eckdaten stehen in `facts` und werden direkt ausgegeben.
  */
 
 export const site = {
@@ -34,13 +33,15 @@ export const site = {
     "Göppingen",
   ],
 
-  /** TODO: vom Kunden bestätigen lassen */
-  placeholders: {
-    phoneHours: "[Mo–Fr, Uhrzeiten]",
-    yearsExperience: "[X]",
-    foundingYear: "[Jahr]",
-    vatId: "[USt-IdNr. bzw. Hinweis Kleinunternehmerregelung]",
+  /** Bestätigte Eckdaten */
+  facts: {
+    phoneHours: "Mo–Fr 8–17 Uhr, Sa 8–14 Uhr",
+    yearsExperience: "8",
+    foundingYear: "2026",
   },
+
+  /** Nebengewerbe, Kleinunternehmer nach § 19 UStG — keine USt-IdNr. */
+  smallBusiness: true,
 
   cta: {
     primary: "Kostenlose Vor-Ort-Begehung anfragen",

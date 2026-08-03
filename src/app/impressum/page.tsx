@@ -53,9 +53,10 @@ export default function ImpressumPage() {
             </p>
           </div>
           <div>
-            <h2 className="font-display text-xl font-bold">Umsatzsteuer-ID</h2>
+            <h2 className="font-display text-xl font-bold">Umsatzsteuer</h2>
             <p className="mt-3 text-steel">
-              <span className="placeholder-fact">{site.placeholders.vatId}</span>
+              Kleinunternehmer gemäß § 19 UStG. Es wird keine Umsatzsteuer
+              ausgewiesen.
             </p>
           </div>
           <p className="border border-line bg-mist p-5 text-[14px] text-steel">

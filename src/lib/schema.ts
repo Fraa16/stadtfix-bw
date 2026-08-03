@@ -25,6 +25,20 @@ export function localBusinessSchema() {
       addressCountry: "DE",
     },
     areaServed: site.region.map((city) => ({ "@type": "City", name: city })),
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "17:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "08:00",
+        closes: "14:00",
+      },
+    ],
     knowsAbout: [
       "Taubenabwehr",
       "Taubenvergrämung",
