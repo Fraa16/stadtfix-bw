@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
+import { site } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Datenschutzerklärung",
@@ -8,11 +9,11 @@ export const metadata: Metadata = {
   robots: { index: false },
 };
 
-/**
- * TODO: Datenschutzerklärung der bestehenden Website übernehmen bzw. neu
- * erstellen lassen (DSGVO). Die Struktur unten ist ein Gerüst und keine
- * rechtsgültige Erklärung.
- */
+const h2 = "font-display text-xl font-bold text-ink";
+const p = "mt-3 text-steel";
+const ul = "mt-3 list-disc space-y-1 pl-5 text-steel";
+const strong = "font-semibold text-ink";
+
 export default function DatenschutzPage() {
   return (
     <>
@@ -26,60 +27,239 @@ export default function DatenschutzPage() {
       />
       <section className="py-16">
         <div className="container-site max-w-3xl space-y-8 text-[16px] leading-relaxed">
-          <p className="border border-line bg-mist p-5 text-[14px] text-steel">
-            Hinweis: Diese Seite ist ein Platzhalter-Gerüst. Die vollständige
-            Datenschutzerklärung wird vor dem Livegang von der bestehenden
-            Website übernommen bzw. DSGVO-konform erstellt.
+          <p className="text-steel">
+            Der Schutz Ihrer personenbezogenen Daten ist uns wichtig. Nachfolgend
+            informieren wir Sie darüber, welche Daten beim Besuch dieser Website
+            verarbeitet werden, zu welchem Zweck und auf welcher Rechtsgrundlage.
           </p>
 
           <div>
-            <h2 className="font-display text-xl font-bold">Cookies und Einwilligung</h2>
-            <p className="mt-3 text-steel">
-              Diese Website verwendet standardmäßig ausschließlich technisch
-              notwendige Cookies. Dazu gehört ein Cookie, das Ihre
-              Cookie-Auswahl speichert:
+            <h2 className={h2}>1. Verantwortlicher</h2>
+            <p className={p}>
+              Verantwortlich für die Datenverarbeitung auf dieser Website ist:
             </p>
-            <ul className="mt-3 list-disc space-y-1 pl-5 text-steel">
-              <li>
-                <strong className="font-semibold text-ink">sf_consent</strong>{" "}
-                (notwendig): speichert Ihre Einwilligungs-Entscheidung, damit der
-                Cookie-Hinweis nicht bei jedem Besuch erneut erscheint.
-                Speicherdauer: rund 6 Monate.
-              </li>
-            </ul>
-            <p className="mt-3 text-steel">
-              Optionale Cookies und Dienste teilen wir in die Kategorien{" "}
-              <strong className="font-semibold text-ink">Statistik</strong> und{" "}
-              <strong className="font-semibold text-ink">Marketing / Externe
-              Medien</strong> ein. Diese werden erst gesetzt bzw. geladen, wenn
-              Sie im Cookie-Banner ausdrücklich zustimmen (Opt-in). Ohne Ihre
-              Einwilligung findet in diesen Kategorien keine Verarbeitung statt.
-            </p>
-            <p className="mt-3 text-steel">
-              Ihre Einwilligung ist freiwillig und jederzeit mit Wirkung für die
-              Zukunft widerrufbar. Sie können Ihre Auswahl über den Link{" "}
-              <strong className="font-semibold text-ink">
-                „Cookie-Einstellungen"
-              </strong>{" "}
-              im Footer jederzeit anpassen. Rechtsgrundlage ist § 25 Abs. 1 TDDDG
-              in Verbindung mit Art. 6 Abs. 1 lit. a DSGVO (Einwilligung); für
-              notwendige Cookies § 25 Abs. 2 TDDDG.
+            <p className={p}>
+              {site.legalName}
+              <br />
+              Inhaber: {site.founder}
+              <br />
+              {site.contact.street}
+              <br />
+              {site.contact.zipCity}
+              <br />
+              Telefon:{" "}
+              <a href={`tel:${site.contact.phoneE164}`} className="underline underline-offset-4">
+                {site.contact.phoneDisplay}
+              </a>
+              <br />
+              E-Mail:{" "}
+              <a href={`mailto:${site.contact.email}`} className="underline underline-offset-4">
+                {site.contact.email}
+              </a>
             </p>
           </div>
-          {[
-            "Verantwortlicher",
-            "Erhebung und Speicherung personenbezogener Daten",
-            "Kontaktformular",
-            "Hosting",
-            "Ihre Rechte",
-          ].map((h) => (
-            <div key={h}>
-              <h2 className="font-display text-xl font-bold">{h}</h2>
-              <p className="mt-3 text-steel">
-                <span className="placeholder-fact">[Inhalt folgt]</span>
-              </p>
-            </div>
-          ))}
+
+          <div>
+            <h2 className={h2}>2. Allgemeines zur Datenverarbeitung</h2>
+            <p className={p}>
+              Personenbezogene Daten sind alle Informationen, die sich auf eine
+              identifizierte oder identifizierbare natürliche Person beziehen. Wir
+              verarbeiten personenbezogene Daten nur, soweit dies zur Bereitstellung
+              der Website und unserer Leistungen erforderlich ist oder Sie
+              eingewilligt haben.
+            </p>
+            <p className={p}>
+              Rechtsgrundlagen der Verarbeitung sind insbesondere Ihre Einwilligung
+              (Art. 6 Abs. 1 lit. a DSGVO), die Erfüllung eines Vertrags oder
+              vorvertraglicher Maßnahmen (lit. b) sowie unsere berechtigten
+              Interessen an einem sicheren, funktionsfähigen Webauftritt (lit. f).
+            </p>
+          </div>
+
+          <div>
+            <h2 className={h2}>3. Ihre Rechte</h2>
+            <p className={p}>Ihnen stehen gegenüber uns folgende Rechte zu:</p>
+            <ul className={ul}>
+              <li>Auskunft über die zu Ihrer Person verarbeiteten Daten (Art. 15 DSGVO),</li>
+              <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO),</li>
+              <li>Löschung (Art. 17 DSGVO),</li>
+              <li>Einschränkung der Verarbeitung (Art. 18 DSGVO),</li>
+              <li>Datenübertragbarkeit (Art. 20 DSGVO),</li>
+              <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO).</li>
+            </ul>
+            <p className={p}>
+              Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die
+              Zukunft widerrufen (Art. 7 Abs. 3 DSGVO). Zudem haben Sie das Recht,
+              sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig
+              ist:
+            </p>
+            <p className={p}>
+              Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit
+              Baden-Württemberg
+              <br />
+              Königstraße 10a, 70173 Stuttgart
+              <br />
+              <a
+                href="https://www.baden-wuerttemberg.datenschutz.de"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4"
+              >
+                www.baden-wuerttemberg.datenschutz.de
+              </a>
+            </p>
+          </div>
+
+          <div>
+            <h2 className={h2}>4. Websitebesuch, Server-Logfiles und Hosting</h2>
+            <p className={p}>
+              Beim Aufruf dieser Website werden durch den Hosting-Anbieter
+              automatisch Informationen erfasst, die Ihr Browser übermittelt und die
+              technisch erforderlich sind, um Ihnen die Website anzuzeigen und die
+              Stabilität und Sicherheit zu gewährleisten (Server-Logfiles): IP-Adresse,
+              Datum und Uhrzeit der Anfrage, aufgerufene Seite/Datei, übertragene
+              Datenmenge, Referrer-URL sowie Browsertyp und Betriebssystem.
+            </p>
+            <p className={p}>
+              Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse
+              an einer sicheren und zuverlässigen Bereitstellung der Website).
+            </p>
+            <p className={p}>
+              Die Website wird gehostet bei der{" "}
+              <span className={strong}>Vercel Inc.</span>, 340 S Lemon Ave #4133,
+              Walnut, CA 91789, USA. Vercel verarbeitet die vorgenannten Daten in
+              unserem Auftrag als Auftragsverarbeiter (Art. 28 DSGVO). Dabei kann es
+              zu einer Übermittlung in die USA kommen; diese ist durch den Abschluss
+              der EU-Standardvertragsklauseln (Art. 46 DSGVO) sowie ergänzende
+              Maßnahmen abgesichert.
+            </p>
+          </div>
+
+          <div>
+            <h2 className={h2}>5. SSL-/TLS-Verschlüsselung</h2>
+            <p className={p}>
+              Diese Website nutzt aus Sicherheitsgründen und zum Schutz der
+              Übertragung vertraulicher Inhalte eine SSL-/TLS-Verschlüsselung. Eine
+              verschlüsselte Verbindung erkennen Sie am „https://" in der Adresszeile
+              Ihres Browsers.
+            </p>
+          </div>
+
+          <div>
+            <h2 className={h2}>6. Cookies und Einwilligung</h2>
+            <p className={p}>
+              Diese Website verwendet standardmäßig ausschließlich technisch
+              notwendige Cookies. Dazu gehört ein Cookie, das Ihre Cookie-Auswahl
+              speichert:
+            </p>
+            <ul className={ul}>
+              <li>
+                <span className={strong}>sf_consent</span> (notwendig): speichert Ihre
+                Einwilligungs-Entscheidung, damit der Cookie-Hinweis nicht bei jedem
+                Besuch erneut erscheint. Speicherdauer: rund 6 Monate.
+              </li>
+            </ul>
+            <p className={p}>
+              Optionale Cookies und Dienste teilen wir in die Kategorien{" "}
+              <span className={strong}>Statistik</span> und{" "}
+              <span className={strong}>Marketing / Externe Medien</span> ein. Diese
+              werden erst gesetzt bzw. geladen, wenn Sie im Cookie-Banner
+              ausdrücklich zustimmen (Opt-in). Ohne Ihre Einwilligung findet in
+              diesen Kategorien keine Verarbeitung statt.
+            </p>
+            <p className={p}>
+              Ihre Einwilligung ist freiwillig und jederzeit mit Wirkung für die
+              Zukunft widerrufbar. Sie können Ihre Auswahl über den Link{" "}
+              <span className={strong}>„Cookie-Einstellungen"</span> im Footer
+              jederzeit anpassen. Rechtsgrundlage ist § 25 Abs. 1 TDDDG in Verbindung
+              mit Art. 6 Abs. 1 lit. a DSGVO (Einwilligung); für notwendige Cookies
+              § 25 Abs. 2 TDDDG.
+            </p>
+          </div>
+
+          <div>
+            <h2 className={h2}>7. Kontaktaufnahme</h2>
+            <p className={p}>
+              <span className={strong}>Kontaktformular.</span> Das Formular auf dieser
+              Website speichert Ihre Eingaben nicht auf unseren Servern. Beim Absenden
+              wird aus Ihren Angaben eine Nachricht zusammengestellt und – je nach
+              Ihrer Wahl – Ihr WhatsApp oder Ihr E-Mail-Programm mit dieser
+              vorbereiteten Nachricht geöffnet. Der eigentliche Versand erfolgt erst
+              durch Sie. Rechtsgrundlage für die anschließende Bearbeitung Ihrer
+              Anfrage ist Art. 6 Abs. 1 lit. b und lit. f DSGVO.
+            </p>
+            <p className={p}>
+              <span className={strong}>Kontakt über WhatsApp.</span> Wenn Sie uns über
+              den WhatsApp-Button oder das Formular via WhatsApp kontaktieren, werden
+              die übermittelten Daten (u. a. Ihre Telefonnummer, der Nachrichteninhalt
+              und Metadaten) durch die WhatsApp Ireland Limited bzw. Meta Platforms
+              Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland, verarbeitet.
+              Dabei kann es zu einer Übermittlung in die USA kommen. Für diese
+              Verarbeitung gilt die{" "}
+              <a
+                href="https://www.whatsapp.com/legal/privacy-policy-eea"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4"
+              >
+                Datenschutzrichtlinie von WhatsApp/Meta
+              </a>
+              . Die Nutzung von WhatsApp erfolgt auf Ihre Initiative; Rechtsgrundlage
+              ist Art. 6 Abs. 1 lit. a und lit. b DSGVO. Möchten Sie dies vermeiden,
+              erreichen Sie uns jederzeit auch per E-Mail oder Telefon.
+            </p>
+            <p className={p}>
+              <span className={strong}>E-Mail und Telefon.</span> Bei einer
+              Kontaktaufnahme per E-Mail oder Telefon verarbeiten wir Ihre Angaben zur
+              Bearbeitung der Anfrage (Art. 6 Abs. 1 lit. b und lit. f DSGVO). Wir
+              löschen diese Daten, sobald sie für die Zweckerreichung nicht mehr
+              erforderlich sind, und beachten gesetzliche Aufbewahrungsfristen.
+            </p>
+          </div>
+
+          <div>
+            <h2 className={h2}>8. Schriftarten</h2>
+            <p className={p}>
+              Diese Website bindet Schriftarten lokal ein. Sie werden von unserem
+              Server ausgeliefert; beim Aufruf der Website wird keine Verbindung zu
+              Servern von Google oder anderen Dritten hergestellt. Es werden hierfür
+              keine personenbezogenen Daten an Dritte übertragen.
+            </p>
+          </div>
+
+          <div>
+            <h2 className={h2}>9. Google Maps (nur mit Einwilligung)</h2>
+            <p className={p}>
+              Sofern eingebunden, laden wir Kartenmaterial von Google Maps
+              (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland)
+              erst, nachdem Sie in der Kategorie{" "}
+              <span className={strong}>Marketing / Externe Medien</span> eingewilligt
+              haben. Ohne Einwilligung wird keine Verbindung zu Google hergestellt.
+              Nach Einwilligung kann Google Ihre IP-Adresse verarbeiten und Daten in
+              die USA übermitteln. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO;
+              Ihre Einwilligung können Sie jederzeit über die Cookie-Einstellungen
+              widerrufen.
+            </p>
+          </div>
+
+          <div>
+            <h2 className={h2}>10. Keine automatisierte Entscheidungsfindung, kein Tracking</h2>
+            <p className={p}>
+              Wir setzen keine Analyse-, Tracking- oder Profiling-Dienste ein und
+              führen keine automatisierte Entscheidungsfindung einschließlich
+              Profiling im Sinne des Art. 22 DSGVO durch.
+            </p>
+          </div>
+
+          <div>
+            <h2 className={h2}>11. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+            <p className={p}>
+              Diese Datenschutzerklärung ist aktuell gültig. Durch die
+              Weiterentwicklung der Website oder geänderte gesetzliche Vorgaben kann
+              es notwendig werden, sie anzupassen.
+            </p>
+            <p className={p}>Stand: August 2026</p>
+          </div>
         </div>
       </section>
     </>
