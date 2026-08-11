@@ -146,33 +146,12 @@ export default function DatenschutzPage() {
           </div>
 
           <div>
-            <h2 className={h2}>6. Cookies und Einwilligung</h2>
+            <h2 className={h2}>6. Cookies</h2>
             <p className={p}>
-              Diese Website verwendet standardmäßig ausschließlich technisch
-              notwendige Cookies. Dazu gehört ein Cookie, das Ihre Cookie-Auswahl
-              speichert:
-            </p>
-            <ul className={ul}>
-              <li>
-                <span className={strong}>sf_consent</span> (notwendig): speichert Ihre
-                Einwilligungs-Entscheidung, damit der Cookie-Hinweis nicht bei jedem
-                Besuch erneut erscheint. Speicherdauer: rund 6 Monate.
-              </li>
-            </ul>
-            <p className={p}>
-              Optionale externe Dienste fassen wir in der Kategorie{" "}
-              <span className={strong}>Marketing / Externe Medien</span> zusammen
-              (z. B. eine künftig eingebundene Karte). Diese werden erst geladen,
-              wenn Sie im Cookie-Banner ausdrücklich zustimmen (Opt-in). Ohne Ihre
-              Einwilligung findet in dieser Kategorie keine Verarbeitung statt.
-            </p>
-            <p className={p}>
-              Ihre Einwilligung ist freiwillig und jederzeit mit Wirkung für die
-              Zukunft widerrufbar. Sie können Ihre Auswahl über den Link{" "}
-              <span className={strong}>„Cookie-Einstellungen"</span> im Footer
-              jederzeit anpassen. Rechtsgrundlage ist § 25 Abs. 1 TDDDG in Verbindung
-              mit Art. 6 Abs. 1 lit. a DSGVO (Einwilligung); für notwendige Cookies
-              § 25 Abs. 2 TDDDG.
+              Diese Website verwendet keine Cookies und speichert ohne Ihr Zutun
+              keine Informationen auf Ihrem Endgerät. Es werden weder
+              Analyse- noch Marketing-Cookies gesetzt. Die eingesetzte
+              Reichweitenmessung (siehe Ziffer 9) arbeitet cookiefrei.
             </p>
           </div>
 
@@ -227,22 +206,7 @@ export default function DatenschutzPage() {
           </div>
 
           <div>
-            <h2 className={h2}>9. Google Maps (nur mit Einwilligung)</h2>
-            <p className={p}>
-              Sofern eingebunden, laden wir Kartenmaterial von Google Maps
-              (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland)
-              erst, nachdem Sie in der Kategorie{" "}
-              <span className={strong}>Marketing / Externe Medien</span> eingewilligt
-              haben. Ohne Einwilligung wird keine Verbindung zu Google hergestellt.
-              Nach Einwilligung kann Google Ihre IP-Adresse verarbeiten und Daten in
-              die USA übermitteln. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO;
-              Ihre Einwilligung können Sie jederzeit über die Cookie-Einstellungen
-              widerrufen.
-            </p>
-          </div>
-
-          <div>
-            <h2 className={h2}>10. Reichweitenmessung (Vercel Web Analytics)</h2>
+            <h2 className={h2}>9. Reichweitenmessung (Vercel Web Analytics)</h2>
             <p className={p}>
               Zur statistischen Auswertung der Websitenutzung setzen wir Vercel Web
               Analytics ein, einen Dienst der Vercel Inc., 340 S Lemon Ave #4133,
@@ -274,7 +238,7 @@ export default function DatenschutzPage() {
           </div>
 
           <div>
-            <h2 className={h2}>11. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+            <h2 className={h2}>10. Aktualität und Änderung dieser Datenschutzerklärung</h2>
             <p className={p}>
               Diese Datenschutzerklärung ist aktuell gültig. Durch die
               Weiterentwicklung der Website oder geänderte gesetzliche Vorgaben kann
