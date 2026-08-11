@@ -3,7 +3,6 @@ import { Archivo, Inter } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { CookieConsent } from "@/components/consent/CookieConsent";
 import { Analytics } from "@vercel/analytics/next";
 import { site } from "@/content/site";
 import "./globals.css";
@@ -63,7 +62,6 @@ export default function RootLayout({
         </main>
         <Footer />
         <WhatsAppButton />
-        <CookieConsent />
         <Analytics />
       </body>
     </html>
