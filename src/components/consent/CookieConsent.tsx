@@ -13,15 +13,10 @@ import {
 } from "@/lib/consent";
 
 const optionalCategories: {
-  key: "statistics" | "marketing";
+  key: "marketing";
   title: string;
   text: string;
 }[] = [
-  {
-    key: "statistics",
-    title: "Statistik",
-    text: "Anonyme Auswertung der Seitennutzung, damit wir die Website verbessern können. Wird nur mit Ihrer Einwilligung geladen.",
-  },
   {
     key: "marketing",
     title: "Marketing / Externe Medien",
@@ -39,7 +34,6 @@ export function CookieConsent() {
   const [mounted, setMounted] = useState(false);
   const [decided, setDecided] = useState(true); // assume decided until mount → no flash
   const [open, setOpen] = useState(false);
-  const [statistics, setStatistics] = useState(false);
   const [marketing, setMarketing] = useState(false);
 
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -47,7 +41,6 @@ export function CookieConsent() {
 
   const syncFromStore = useCallback(() => {
     const c = readConsent();
-    setStatistics(c?.categories.statistics ?? false);
     setMarketing(c?.categories.marketing ?? false);
   }, []);
 
@@ -73,8 +66,7 @@ export function CookieConsent() {
 
   const acceptAll = () => persist(grantAll);
   const rejectAll = () => persist(denyAll);
-  const saveSelection = () =>
-    persist({ necessary: true, statistics, marketing });
+  const saveSelection = () => persist({ necessary: true, marketing });
 
   // Dialog: focus management, Esc, focus trap.
   useEffect(() => {
@@ -229,9 +221,8 @@ export function CookieConsent() {
               </div>
 
               {optionalCategories.map((c) => {
-                const value = c.key === "statistics" ? statistics : marketing;
-                const setValue =
-                  c.key === "statistics" ? setStatistics : setMarketing;
+                const value = marketing;
+                const setValue = setMarketing;
                 return (
                   <label
                     key={c.key}
