@@ -160,12 +160,11 @@ export default function DatenschutzPage() {
               </li>
             </ul>
             <p className={p}>
-              Optionale Cookies und Dienste teilen wir in die Kategorien{" "}
-              <span className={strong}>Statistik</span> und{" "}
-              <span className={strong}>Marketing / Externe Medien</span> ein. Diese
-              werden erst gesetzt bzw. geladen, wenn Sie im Cookie-Banner
-              ausdrücklich zustimmen (Opt-in). Ohne Ihre Einwilligung findet in
-              diesen Kategorien keine Verarbeitung statt.
+              Optionale externe Dienste fassen wir in der Kategorie{" "}
+              <span className={strong}>Marketing / Externe Medien</span> zusammen
+              (z. B. eine künftig eingebundene Karte). Diese werden erst geladen,
+              wenn Sie im Cookie-Banner ausdrücklich zustimmen (Opt-in). Ohne Ihre
+              Einwilligung findet in dieser Kategorie keine Verarbeitung statt.
             </p>
             <p className={p}>
               Ihre Einwilligung ist freiwillig und jederzeit mit Wirkung für die
@@ -243,11 +242,34 @@ export default function DatenschutzPage() {
           </div>
 
           <div>
-            <h2 className={h2}>10. Keine automatisierte Entscheidungsfindung, kein Tracking</h2>
+            <h2 className={h2}>10. Reichweitenmessung (Vercel Web Analytics)</h2>
             <p className={p}>
-              Wir setzen keine Analyse-, Tracking- oder Profiling-Dienste ein und
-              führen keine automatisierte Entscheidungsfindung einschließlich
-              Profiling im Sinne des Art. 22 DSGVO durch.
+              Zur statistischen Auswertung der Websitenutzung setzen wir Vercel Web
+              Analytics ein, einen Dienst der Vercel Inc., 340 S Lemon Ave #4133,
+              Walnut, CA 91789, USA. Der Dienst arbeitet{" "}
+              <span className={strong}>cookiefrei</span>: Es werden keine Cookies
+              gesetzt und keine Informationen auf Ihrem Endgerät gespeichert oder
+              ausgelesen. Erfasst werden ausschließlich aggregierte, anonymisierte
+              Nutzungsdaten (z. B. aufgerufene Seiten, ungefähre Herkunft,
+              verwendeter Gerätetyp); es findet kein geräteübergreifendes Tracking
+              und keine Bildung von Nutzerprofilen statt. IP-Adressen werden nicht
+              dauerhaft gespeichert.
+            </p>
+            <p className={p}>
+              Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes
+              Interesse liegt in der anonymen, datensparsamen Messung der
+              Reichweite und der Verbesserung unseres Angebots. Da die Verarbeitung
+              cookiefrei und anonymisiert erfolgt, ist hierfür keine Einwilligung
+              nach § 25 TDDDG erforderlich. Sie haben das Recht, dieser
+              Verarbeitung aus Gründen, die sich aus Ihrer besonderen Situation
+              ergeben, jederzeit zu widersprechen (Art. 21 DSGVO). Eine Übermittlung
+              in die USA ist durch EU-Standardvertragsklauseln abgesichert.
+            </p>
+            <p className={p}>
+              Darüber hinaus setzen wir keine weiteren Tracking- oder
+              Profiling-Dienste ein und führen keine automatisierte
+              Entscheidungsfindung einschließlich Profiling im Sinne des Art. 22
+              DSGVO durch.
             </p>
           </div>
 

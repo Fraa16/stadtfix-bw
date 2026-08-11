@@ -7,15 +7,14 @@
  */
 
 export const CONSENT_COOKIE = "sf_consent";
-export const CONSENT_VERSION = 1;
+export const CONSENT_VERSION = 2;
 export const CONSENT_MAX_AGE = 60 * 60 * 24 * 182; // ~6 Monate in Sekunden
 
 /** Optionale Kategorien (necessary ist immer true und nicht abwählbar). */
-export type OptionalCategory = "statistics" | "marketing";
+export type OptionalCategory = "marketing";
 
 export type Categories = {
   necessary: true;
-  statistics: boolean;
   marketing: boolean;
 };
 
@@ -30,13 +29,11 @@ export const OPEN_CONSENT_EVENT = "sf:open-consent";
 
 export const denyAll: Categories = {
   necessary: true,
-  statistics: false,
   marketing: false,
 };
 
 export const grantAll: Categories = {
   necessary: true,
-  statistics: true,
   marketing: true,
 };
 
